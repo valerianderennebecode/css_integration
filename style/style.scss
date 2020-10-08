@@ -1,10 +1,12 @@
 
-$colorblack : #20161E ;
+$colorblack : #5e5b5c ;
 $colorlightgreen : #b3d5bc ;
 $colorgrey : darkgrey;
 $textwhitecolor : rgb(235, 227, 227) ;
 $lightgreycolor : lightgrey;
 $verydarkgreycolor: #2A282E;
+$colorbluegraph: #468df1;
+$colorwhitegraph: #dae7fc;
 
 $fontrobotto: 'Roboto', sans-serif;
 $fontsans : 'Open Sans', sans-serif;
@@ -64,6 +66,7 @@ body {
     text-align: left;
     .image1 {
         text-align: center;
+        margin-bottom: 15px;
     }
     h2 {
         margin-top: -5px;
@@ -113,14 +116,153 @@ body {
 
 /* Exercice 2  Exercice 2 Exercice 2 Exercice 2 Exercice 2 Exercice 2 Exercice 2 */
 
-.container3 {
-    margin: 15px;
+$size-one : 14px;
+$size-two : 18px;
+
+.container2 {
+    margin-top: 50px;
+    margin-bottom: 50px; 
+    border-radius: 5px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    font-size: $size-two;
+    width: 400px;
+    height: 625px;
+    background-color: $colorbluegraph;
+    color: $colorwhitegraph;
+    .container2bis
+    {
+        padding: 40px;
+        .users {
+            font-size: $size-two;
+        }
+        .c90 {
+            font-size: 50px;
+            padding-bottom: 25px;
+        }
+        .pageviews {
+            font-size: $size-one
+        }
+        .line {
+            margin-top: -5px;
+        }
+        .topactivepages {
+            display: grid;
+            margin-top : 20px;
+            line-height: 1;
+            grid-template-columns: 242px 75px ;
+            grid-template-rows: repeat(6, 1fr 10px);
+            border-color: solid 2 px green;
+            .active {
+                grid-area: 1 / 1 / 2 / 2;
+                font-size: $size-one;
+                margin-bottom: -30px;
+            }
+            .Users {
+                grid-area: 1 / 2 / 2 / 3;
+                font-size: $size-one;
+                text-align: end;
+            }
+            .line0 {
+                grid-area: 2 / 1 / 3 / 3;
+                margin-top: -15px;
+            }
+            .name1 {
+                grid-area: 3 / 1 / 4 / 3;
+                padding: 5px;
+            }
+            .c46 {
+                grid-area: 3 / 2 / 4 / 3;
+                text-align: end;
+                padding: 5px;
+            }
+            .line1 {
+                grid-area: 4 / 1 / 5 / 3;
+                margin-top: -15px;
+                padding: 5px;
+            }
+            .name2 {
+                grid-area: 5 / 1 / 6 / 3;
+                padding: 5px;
+            }
+            .c8 {
+                grid-area: 5 / 2 / 6 / 3;
+                text-align: end;
+                padding: 5px;
+            }
+            .line2 {
+                grid-area: 6 / 1 / 7 / 3;
+                margin-top: -15px;
+                padding: 5px;
+            }
+            .name3 {
+                grid-area: 7 / 1 / 8 / 3;
+                padding: 5px;
+            }
+            .c30 {
+                grid-area: 7 / 2 / 8 / 3;
+                text-align: end;
+                padding: 5px;
+            }
+            .line3 {
+                grid-area: 8 / 1 / 9 / 3;
+                margin-top: -15px;
+                padding: 5px;
+            }
+            .name4 {
+                grid-area: 9 / 1 / 10 / 3;
+                padding: 5px;
+            }
+            .c31 {
+                grid-area: 9 / 2 / 10 / 3;
+                text-align: end;
+                padding: 5px;
+            }
+            .line4 {
+                grid-area: 10 / 1 / 11 / 3;
+                margin-top: -15px;
+                padding: 5px;
+            }
+            .name5 {
+                grid-area: 11 / 1 / 12 / 3;
+                padding: 5px;
+            }
+            .c32 {
+                grid-area: 11 / 2 / 12 / 3;
+                text-align: end;
+                padding: 5px;
+            }
+        }
+    }
+    .report {
+        margin-top: -25px;
+        .report2 {
+            padding-right: 25px;
+            text-align: end;
+            i {
+                padding-left: 20px;
+            }
+        }
+    }
+}
+
+hr {
+    opacity: 30%;
+}
+
+/* Exercice 3  Exercice 3 Exercice 3 Exercice 3 Exercice 3 Exercice 3 Exercice 3 Exercice 3*/
+
+
+.container3 {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
     width: 700px;
     height : 400px;
-    align-items: stretch;
-    border: solid 1px $colorgrey;
+    color: $colorblack;
+    
+    border: solid 1px lightgrey;
+    box-shadow: 0px 0px 11px -1px lightgrey;
     .image {
         width: 40%;
         background-size: cover ;
@@ -129,7 +271,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        line-height: 1.5;
+        
         width: 60%;
         padding: 20px;
         h4 {
@@ -142,7 +284,8 @@ body {
         .subtitle3 {
             color: $colorgrey;
             font-family: $fontsans;
-            margin-top: -100px;
+            margin-top: -80px;
+            font-size: 20px;
         }
         .bottom3 {
             display: flex;
@@ -150,10 +293,13 @@ body {
             .pictext {
                 display: flex;
                 width: 70%;
-                img {
+                .photo {
                     display: flex;
-                    border-radius: 50%;
-                    align-self: center;
+                    align-items: center;
+                    img {
+                        display: flex;
+                        border-radius: 50%;
+                    }
                 }
                 .texttext {
                     display: flex;
@@ -165,13 +311,21 @@ body {
                     }
                     .textbottom {
                         text-align: left;
+                        color: $lightgreycolor
                     }
                 }
             }
             .icon {
+                display: flex;;
                 width: 25%;
-                text-align: right;
-                
+                vertical-align: center;
+                font-size: 20px;
+                color: lightgray;
+                align-items: center;
+                justify-content: flex-end;
+                i {
+                    padding: 5px;
+                }
             }
         }
         
@@ -182,7 +336,6 @@ body {
 
 
 
-/* Exercice 3  Exercice 3 Exercice 3 Exercice 3 Exercice 3 Exercice 3 Exercice 3 Exercice 3*/
 
 
 
